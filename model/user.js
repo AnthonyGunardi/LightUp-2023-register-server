@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const userSchema = new Schema({
+    sesi_program:{
+        type:String
+    },
     nama_perusahaan:{
         type:String,
         required:true,
