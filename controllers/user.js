@@ -12,7 +12,7 @@ exports.getUserById = async(req,res) => {
 
 exports.getUsers = async(req,res) => {
   try {
-      const users= await User.find().sort({ nama_perusahaan: -1 });
+      const users= await User.find().sort({ sesi_program: 1, nama_perusahaan: 1 });
       res.status(200).json(users);
   } catch (error) {
       res.status(404).json({ message: error.message });
